@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * This class is a custom adaptor to work with our custom list items and data.
@@ -51,7 +52,7 @@ public class MyCustomAdapter extends BaseAdapter {
     int position indicates which row the framework is trying to draw
      */
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         //create a new View
         View row = null; // a reference that will refer to the current row being drawn
 
@@ -68,6 +69,17 @@ public class MyCustomAdapter extends BaseAdapter {
         //get the ImageView and set its image icon
         ImageView imageView = (ImageView) row.findViewById(R.id.imageView);
         imageView.setImageResource(icons[position]);
+
+        //add an oncliscklistener to respond to clicks
+        row.setOnClickListener( new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                //TODO: you will broadcast an Intent with a URI to open up the website...
+                //URIs will be stored in strings.xml
+                Toast.makeText(context, descriptions[position], Toast.LENGTH_LONG).show();
+            }
+        });
 
         return row;
 
