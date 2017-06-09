@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">My Fave Sites!!!</string>
+
+    <string-array name="description_array">
+        <item>Facebook, a cool site for old people</item>
+        <item>Google, a cool site to search for Google</item>
+        <item>Seneca, a great place to learn. Your very own Hogwarts</item>
+    </string-array>
+    <!-- TODO: you will also make an array to store the URI's -->
+</resources>
