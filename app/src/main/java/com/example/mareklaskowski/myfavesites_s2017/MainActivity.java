@@ -20,5 +20,9 @@ public class MainActivity extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.listView);
         //in order to set up our listView to work properly, we also need to provide
         //a custom ArrayAdaptor that will use a custom listItem layout
+        //instantiate a MyCustomListAdatper
+        MyCustomAdapter myCustomAdapter = new MyCustomAdapter(this,descriptions,icons);
+        //connect the ListView with MyCustomAdapter
+        listView.setAdapter(myCustomAdapter);
     }
 }

@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
@@ -65,7 +66,10 @@ public class MyCustomAdapter extends BaseAdapter {
         TextView textView = (TextView) row.findViewById(R.id.textView);
         textView.setText(descriptions[position]);
         //get the ImageView and set its image icon
+        ImageView imageView = (ImageView) row.findViewById(R.id.imageView);
+        imageView.setImageResource(icons[position]);
 
+        return row;
 
     }
 }
