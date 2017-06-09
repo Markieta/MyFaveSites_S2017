@@ -2,6 +2,7 @@ package com.example.mareklaskowski.myfavesites_s2017;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,6 +14,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //let's retrieve the array of descriptions from the xml string-array resource
-        
+        String[] descriptions = getResources().getStringArray(R.array.description_array);
+
+        //get a reference to our ListView
+        ListView listView = (ListView) findViewById(R.id.listView);
+        //in order to set up our listView to work properly, we also need to provide
+        //a custom ArrayAdaptor that will use a custom listItem layout
     }
 }
