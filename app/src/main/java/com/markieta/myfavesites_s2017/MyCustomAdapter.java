@@ -9,34 +9,22 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-/**
- * This class is a custom adaptor to work with our custom list items and data.
- */
-
 class MyCustomAdapter extends BaseAdapter {
-    //instance variables to store essential data
     private String[] descriptions;
     private int[] icons;
     private Context context;
 
-    //let's write a constructor to set up our instance variables!
     MyCustomAdapter(MainActivity c, String[] d, int[] i){
         descriptions = d;
         icons = i;
         context = c;
     }
 
-    /*
-    called by the framework when it needs to know how many list items there are
-     */
     @Override
     public int getCount() {
         return descriptions.length;
     }
 
-    /*
-    we don't need this for anything
-     */
     @Override
     public Object getItem(int position) {
         return null; //TODO: if you need this for some reason, think of an implementation..
@@ -47,29 +35,21 @@ class MyCustomAdapter extends BaseAdapter {
         return 0;
     }
 
-    /*
-    the android framework will call getView every time it needs to draw your custom list item
-    int position indicates which row the framework is trying to draw
-     */
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
         View row = null;
-        //we're going to use the LayoutInflater class to instantiate a Java object from the xml layout
-        //we get a reference to LayoutInflater through the getSystemService method
-        //recall: "context" is our reference to MainActivity which is a context
+
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        //use the LayoutInflater instance to instantiate a new View of the correct type (custom_list)
+
         if (convertView == null) {
             row = inflater.inflate(R.layout.custom_list, parent, false);
-            //we need to set up the child views that will go into our layout
-            //get the TextView and set its text.
+
             TextView textView = (TextView) row.findViewById(R.id.textView);
             textView.setText(descriptions[position]);
-            //get the ImageView and set its image icon
+
             ImageView imageView = (ImageView) row.findViewById(R.id.imageView);
             imageView.setImageResource(icons[position]);
 
-            //add an oncliscklistener to respond to clicks
             row.setOnClickListener(new View.OnClickListener() {
 
                 @Override
