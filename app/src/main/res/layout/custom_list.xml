@@ -4,18 +4,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/listViewItem"
+    android:gravity="center"
     android:orientation="horizontal">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         app:srcCompat="@mipmap/ic_launcher"
         android:id="@+id/imageView"
-        android:layout_weight="1"
-        android:adjustViewBounds="false" />
+        android:layout_weight="0"
+        android:layout_marginEnd="10dp"
+        android:adjustViewBounds="false"
+        android:contentDescription="@string/image_view_content_description"/>
 
     <TextView
-        android:text="TextView"
+        android:text="@string/textview_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView"

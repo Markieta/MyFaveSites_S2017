@@ -1,10 +1,16 @@
 <resources>
     <string name="app_name">My Fave Sites!!!</string>
+    <string name="image_view_content_description">URL Icon</string>
+    <string name="textview_text">TextView</string>
 
     <string-array name="description_array">
         <item>Facebook, a cool site for old people</item>
         <item>Google, a cool site to search for Google</item>
         <item>Seneca, a great place to learn. Your very own Hogwarts</item>
     </string-array>
-    <!-- TODO: you will also make an array to store the URI's -->
+    <string-array name="urls">
+        <item>https://www.facebook.com/</item>
+        <item>https://www.google.ca</item>
+        <item>http://www.senecacollege.ca/</item>
+    </string-array>
 </resources>

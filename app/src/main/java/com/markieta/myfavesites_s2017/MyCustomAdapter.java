@@ -27,7 +27,7 @@ class MyCustomAdapter extends BaseAdapter {
 
     @Override
     public Object getItem(int position) {
-        return null; //TODO: if you need this for some reason, think of an implementation..
+        return null;
     }
 
     @Override
@@ -55,7 +55,6 @@ class MyCustomAdapter extends BaseAdapter {
                 @Override
                 public void onClick(View v) {
                     //TODO: you will broadcast an Intent with a URI to open up the website...
-                    //URIs will be stored in strings.xml
                     Toast.makeText(context, descriptions[position], Toast.LENGTH_LONG).show();
                 }
             });
