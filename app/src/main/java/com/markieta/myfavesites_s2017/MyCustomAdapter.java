@@ -1,6 +1,8 @@
 package com.markieta.myfavesites_s2017;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,11 +13,13 @@ import android.widget.Toast;
 
 class MyCustomAdapter extends BaseAdapter {
     private String[] descriptions;
+    private String[] urls;
     private int[] icons;
     private Context context;
 
-    MyCustomAdapter(MainActivity c, String[] d, int[] i){
+    MyCustomAdapter(MainActivity c, String[] d, String[] u, int[] i){
         descriptions = d;
+        urls = u;
         icons = i;
         context = c;
     }
@@ -54,7 +58,9 @@ class MyCustomAdapter extends BaseAdapter {
 
                 @Override
                 public void onClick(View v) {
-                    //TODO: you will broadcast an Intent with a URI to open up the website...
+                    Uri uri = Uri.parse(urls[position]);
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    context.startActivity(intent);
                     Toast.makeText(context, descriptions[position], Toast.LENGTH_LONG).show();
                 }
             });

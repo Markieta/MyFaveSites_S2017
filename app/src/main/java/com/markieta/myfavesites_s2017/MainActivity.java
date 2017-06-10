@@ -13,10 +13,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         String[] descriptions = getResources().getStringArray(R.array.description_array);
+        String[] urls = getResources().getStringArray(R.array.urls);
 
         ListView listView = (ListView) findViewById(R.id.listView);
 
-        MyCustomAdapter myCustomAdapter = new MyCustomAdapter(this,descriptions,icons);
+        MyCustomAdapter myCustomAdapter = new MyCustomAdapter(this,descriptions,urls,icons);
         listView.setAdapter(myCustomAdapter);
     }
 }
