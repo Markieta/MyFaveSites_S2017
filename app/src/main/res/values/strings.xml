@@ -2,6 +2,9 @@
     <string name="app_name">My Fave Sites!!!</string>
     <string name="image_view_content_description">URL Icon</string>
     <string name="textview_text">TextView</string>
+    <string name="help_text">DPS924A Lab 5: Link browser app that offers some website links with their respective favicons and descriptions.</string>
+    <string name="help_title">Help</string>
+    <string name="about_title">About</string>
 
     <string-array name="description_array">
         <item>Facebook, a cool site for old people</item>
