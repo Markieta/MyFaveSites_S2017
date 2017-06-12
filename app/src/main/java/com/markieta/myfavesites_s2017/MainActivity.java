@@ -1,5 +1,6 @@
 package com.markieta.myfavesites_s2017;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showAbout() {
-
+        Intent intent = new Intent(this, About.class);
+        startActivity(intent);
     }
 }
